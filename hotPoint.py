@@ -12,7 +12,6 @@ def getHot(movie, year, month, day):
 
     url = 'http://s.weibo.com/weibo/' + parse.quote(movie) + '&xsort=hot&suball=1&timescope=custom::%d-%d-%d&Refer=g' % (year, month, day)
 
-    print('url:' + url)
     req = request.Request(url, headers = headers)
 
     html = request.urlopen(req).read().decode('utf8')
